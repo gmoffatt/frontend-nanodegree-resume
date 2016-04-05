@@ -14,16 +14,9 @@ This is empty on purpose! Your code to build the resume will go here.
 
  //$("#main").append(funThoughts);
 
-
-var formattedRole = HTMLheaderRole.replace("%data%", "Web Developer");
-$("#header").prepend(formattedRole);
-
-var formattedName = HTMLheaderName.replace("%data%", "Greg Moffatt");
-$("#header").prepend(formattedName);
-
 var bio = {
-	"name": "Greg",
-	"role": "Web Developer",
+	"name": "Greg Moffatt",
+	"role": "Front End Web Developer",
 	"contacts": {
 		"mobile": "262-422-7964",
 		"email": "moffattgh@gmail.com",
@@ -31,10 +24,18 @@ var bio = {
 		"twitter": "@gregamoffatt",
 		"location": "Germantown, WI"
 	},
-	"message": "Welcome",
+	"message": "Thank you for visitng my resume",
 	"bioPic": "images/fry.jpg",
 	"skills": ["HTML", "CSS", "JavaScript", "Bootstrap", "GitHub"]
 };
+
+var bioRole = bio.role
+var formattedRole = HTMLheaderRole.replace("%data%", bioRole);
+$("#header").prepend(formattedRole);
+
+var bioName = bio.name
+var formattedName = HTMLheaderName.replace("%data%", bioName);
+$("#header").prepend(formattedName);
 
 var bioPic = bio.bioPic;
 var formattedBioPic = HTMLbioPic.replace("%data%", bioPic);
@@ -56,9 +57,13 @@ var twitter = bio.contacts.twitter;
 var formattedBiotwitter = HTMLtwitter.replace("%data%", twitter);
 $("#header").append(formattedBiotwitter);
 
-var home = bio.contacts.location;
-var formattedBiolocation = HTMLlocation.replace("%data%", location);
+var homeLocation = bio.contacts.location;
+var formattedBiolocation = HTMLlocation.replace("%data%", homeLocation);
 $("#header").append(formattedBiolocation);
+
+var message = bio.message;
+var formattedBiomessage = HTMLwelcomeMsg.replace("%data%", message);
+$("#header").append(formattedBiomessage);
 
 var work = {
 	"jobs": [

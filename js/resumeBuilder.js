@@ -26,7 +26,7 @@ var bio = {
 	},
 	"message": "Thank you for visitng my resume",
 	"bioPic": "images/fry.jpg",
-	"skills": ["HTML", "CSS", "JavaScript", "Bootstrap", "GitHub"]
+	"skills": ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "PHP", "GitHub"]
 };
 
 var bioRole = bio.role
@@ -78,7 +78,7 @@ var work = {
 		"employer": "Merge Healthcare",
 		"title": "Technical Support Representative I",
 		"dates": "January 2008 - September 2008",
-		"location": "Milwaukee, WI",
+		"location": "West Allis, WI",
 		"description": "Provided software support to clinics and hospitals on their imaging archive systems"
 	},
 	{
@@ -92,11 +92,11 @@ var work = {
 };
 
 var education = {
-	"shools": [
+	"schools": [
 	{
 		"name": "Moraine Park",
 		"location": "Fond du Lac, WI",
-		"degree": "Associates",
+		"degree": "Associates Degree",
 		"major": "Civil Engineering - Structural",
 		"dates": "1999-2001",
 		"url": "http://www.morainepark.edu"
@@ -104,35 +104,34 @@ var education = {
 	],
 	"onlineClasses": [
 	{
-		"name": "Udacity",
-		"location": "Online",
-		"degree": "Nanodegree",
-		"major": "Web Developer",
+		"title": "Front End Nanodegree",
+		"school": "Udacity",
 		"dates": "2016-2016",
-		"url": "http://www.udacity.com"
+		"url": "www.udacity.com"
 	},
 	{
-		"name": "Pace University",
+		"title": "Associates Degree - Mobile Telecommunications",
+		"school": "Pace University",
 		"location": "Online",
-		"degree": "Associates",
-		"major": "Telecommunications",
 		"dates": "2013-2015",
-		"url": "http://www.pace.edu"
+		"url": "www.pace.edu"
 	}
 	]
 };
 
 var projects = {
-	"projects": [
+	"project": [
 	{
 		"title": "Project 1",
-		"link": "sample link",
-		"description": "Sample description"
+		"dates": "2016-2016",
+		"description": "Fantastic Project 1",
+		"image": "images/project1.jpg"
 	},
 	{
 		"title": "Project 2",
-		"link": "sample link",
-		"description": "Sample description"
+		"dates": "2016-2016",
+		"description": "Amazing Project 2",
+		"image": "images/project2.jpg"
 	}
 	]
 };
@@ -150,6 +149,10 @@ formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
 $("#skills").append(formattedSkill);
 formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
 $("#skills").append(formattedSkill);
+formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
+$("#skills").append(formattedSkill);
+formattedSkill = HTMLskills.replace("%data%", bio.skills[6]);
+$("#skills").append(formattedSkill);
 
 }
 
@@ -158,9 +161,14 @@ for (jobs in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);
 
 	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[jobs].employer);
+
 	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[jobs].title);
+
 	var formattedEmployerTitle = formattedEmployer + formattedTitle;
 	$(".work-entry:last").append(formattedEmployerTitle);
+
+	var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[jobs].location);
+	$(".work-entry:last").append(formattedLocation);
 
 	var formattedDates = HTMLworkDates.replace("%data%", work.jobs[jobs].dates);
 	$(".work-entry:last").append(formattedDates);
@@ -173,25 +181,76 @@ for (jobs in work.jobs) {
 
 displayWork();
 
-/*function displaySchool() {
-for (jobs in work.jobs) {
+
+function displayProjects() {
+for (project in projects.project) {
+	$("#projects").append(HTMLprojectStart);
+
+	var formattedprojectTitle = HTMLprojectTitle.replace("%data%", projects.project[project].title);
+	$(".project-entry:last").append(formattedprojectTitle);
+
+	var formattedprojectDates = HTMLprojectDates.replace("%data%", projects.project[project].dates);
+	$(".project-entry:last").append(formattedprojectDates);
+
+	var formattedprojectDescription = HTMLprojectDescription.replace("%data%", projects.project[project].description);
+	$(".project-entry:last").append(formattedprojectDescription);
+
+	var formattedprojectImage = HTMLprojectImage.replace("%data%", projects.project[project].image);
+	$(".project-entry:last").append(formattedprojectImage);
+
+}
+}
+
+displayProjects();
+
+
+function displaySchool() {
+for (schools in education.schools) {
 	$("#education").append(HTMLschoolStart);
 
 	var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[schools].name);
+
 	var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[schools].degree);
-	var formattedEmployerTitle = formattedEmployer + formattedTitle;
-	$(".work-entry:last").append(formattedEmployerTitle);
+
+	var formattedSchoolTitle = formattedschoolName + formattedschoolDegree;
+	$(".education-entry:last").append(formattedSchoolTitle);
 
 	var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[schools].dates);
-	$(".work-entry:last").append(formattedDates);
+	$(".education-entry:last").append(formattedschoolDates);
 
-	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[jobs].description);
-	$(".work-entry:last").append(formattedDescription);
+	var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.schools[schools].location);
+	$(".education-entry:last").append(formattedschoolLocation);
+
+	var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[schools].major);
+	$(".education-entry:last").append(formattedschoolMajor);
 
 }
 }
 
-displaySchool();*/
+displaySchool();
+
+function displayOnline() {
+	$("#education").append(HTMLonlineClasses);
+	$("#education").append(HTMLschoolStart);
+for (onlineClasses in education.onlineClasses) {
+
+	var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineClasses[onlineClasses].title);
+
+	var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineClasses[onlineClasses].school);
+
+	var formattedOnlineName = formattedonlineTitle + formattedonlineSchool;
+	$(".education-entry:last").append(formattedOnlineName);
+
+	var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineClasses[onlineClasses].dates);
+	$(".education-entry:last").append(formattedonlineDates);
+
+	var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineClasses[onlineClasses].url);
+	$(".education-entry:last").append(formattedonlineURL);
+
+}
+}
+
+displayOnline();
 
 
 function inName(name) {

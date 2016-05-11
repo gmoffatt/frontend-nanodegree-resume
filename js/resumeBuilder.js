@@ -24,11 +24,13 @@ var bio = {
 		"twitter": "@gregamoffatt",
 		"location": "Germantown, WI"
 	},
-	"message": "Thank you for visitng my resume",
+	"message": "Thank you for viewing my resume",
 	"bioPic": "images/fry.jpg",
 	"skills": ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "PHP", "GitHub"]
 };
 
+
+function displayBio() {
 var bioRole = bio.role
 var formattedRole = HTMLheaderRole.replace("%data%", bioRole);
 $("#header").prepend(formattedRole);
@@ -64,6 +66,9 @@ $("#header").append(formattedBiolocation);
 var message = bio.message;
 var formattedBiomessage = HTMLwelcomeMsg.replace("%data%", message);
 $("#header").append(formattedBiomessage);
+}
+
+displayBio();
 
 var work = {
 	"jobs": [

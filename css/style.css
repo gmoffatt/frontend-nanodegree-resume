@@ -11,7 +11,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Quattrocento Sans', sans-serif;
 }
 
 .clear-fix {
@@ -26,9 +26,9 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: darkcyan;
+  color: #115A5A;
   line-height: 48px;
-  display: inline;
+  display: inline-block;
 }
 
 h2 {
@@ -40,8 +40,7 @@ h2 {
 }
 
 h3 {
-  font-style: italic;
-  font-size: 20px;
+  font-size: 24px;
   color: #000;
   line-height: 22px;
 }
@@ -86,35 +85,35 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: #115A5A;
   text-decoration: none;
   margin-top: 10px;
   display: block;
 }
 
 .welcome-message {
-  font-style: italic;
   font-size: 18px;
-  color: #f3f3f3;
+  font-weight: bold;
+  color: #115A5A;
   line-height: 28px;
 }
 
 #skills-h3 {
-  color: darkcyan;
+  color: #115A5A;
   display: none;
 }
 
 .orange {
-  background-color: darkcyan;
+  background-color: #CECECE;
 }
 
 .orange-text {
-  color: darkcyan;
+  color: #115A5A;
 }
 
 .white-text {
   font-weight: bold;
-  color: #fff;
+  color: #115A5A;
 }
 
 .gray {
@@ -129,7 +128,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #CECECE;
 }
 
 .flex-box {
@@ -163,6 +162,7 @@ img {
 
 span {
   padding: 5px;
+  display: inline-block;
 }
 
 #lets-connect {
@@ -198,7 +198,8 @@ span {
 #map {
   display: block;
   height: 100%;
-  margin: 0 5%;
+  width: 85%;
+  margin: 0 auto;
 }
 
 #mapDiv {

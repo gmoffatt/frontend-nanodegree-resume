@@ -21,7 +21,7 @@ var bio = {
 		"mobile": "262-422-7964",
 		"email": "moffattgh@gmail.com",
 		"github": "gmoffatt",
-		"twitter": "@gregamoffatt",
+		"twitter": "gregamoffatt",
 		"location": "Germantown, WI"
 	},
 	"message": "Thank you for viewing my resume",
@@ -31,41 +31,44 @@ var bio = {
 
 
 function displayBio() {
-var bioRole = bio.role
-var formattedRole = HTMLheaderRole.replace("%data%", bioRole);
-$("#header").prepend(formattedRole);
+	var bioRole = bio.role
+	var formattedRole = HTMLheaderRole.replace("%data%", bioRole);
+	$("#header").prepend(formattedRole);
 
-var bioName = bio.name
-var formattedName = HTMLheaderName.replace("%data%", bioName);
-$("#header").prepend(formattedName);
+	var bioName = bio.name
+	var formattedName = HTMLheaderName.replace("%data%", bioName);
+	$("#header").prepend(formattedName);
 
-var bioPic = bio.bioPic;
-var formattedBioPic = HTMLbioPic.replace("%data%", bioPic);
-$("#header").append(formattedBioPic);
+	var bioPic = bio.bioPic;
+	var formattedBioPic = HTMLbioPic.replace("%data%", bioPic);
+	$("#header").append(formattedBioPic);
 
-var mobile = bio.contacts.mobile;
-var formattedBiomobile = HTMLmobile.replace("%data%", mobile);
-$("#header").append(formattedBiomobile);
+	var mobile = bio.contacts.mobile;
+	var formattedBiomobile = HTMLmobile.replace("%data%", mobile);
+	$("#header").append(formattedBiomobile);
 
-var email = bio.contacts.email;
-var formattedBioemail = HTMLemail.replace("%data%", email);
-$("#header").append(formattedBioemail);
+	var email = bio.contacts.email;
+	var emailLink = ("<a href=\"mailto:" + email + "\">" + email + "</" + "a>");
+	var formattedBioemail = HTMLemail.replace("%data%", emailLink);
+	$("#header").append(formattedBioemail);
 
-var github = bio.contacts.github;
-var formattedBiogithub = HTMLgithub.replace("%data%", github);
-$("#header").append(formattedBiogithub);
+	var github = bio.contacts.github;
+	var githubLink = ("<a href=\"http://www.github.com/" + github + "\">" + github + "</" + "a>");
+	var formattedBiogithub = HTMLgithub.replace("%data%", githubLink);
+	$("#header").append(formattedBiogithub);
 
-var twitter = bio.contacts.twitter;
-var formattedBiotwitter = HTMLtwitter.replace("%data%", twitter);
-$("#header").append(formattedBiotwitter);
+	var twitter = bio.contacts.twitter;
+	var twitterLink = ("<a href=\"http://www.twitter.com/" + twitter + "\">" + twitter + "</" + "a>");
+	var formattedBiotwitter = HTMLtwitter.replace("%data%", twitterLink	);
+	$("#header").append(formattedBiotwitter);
 
-var homeLocation = bio.contacts.location;
-var formattedBiolocation = HTMLlocation.replace("%data%", homeLocation);
-$("#header").append(formattedBiolocation);
+	var homeLocation = bio.contacts.location;
+	var formattedBiolocation = HTMLlocation.replace("%data%", homeLocation);
+	$("#header").append(formattedBiolocation);
 
-var message = bio.message;
-var formattedBiomessage = HTMLwelcomeMsg.replace("%data%", message);
-$("#header").append(formattedBiomessage);
+	var message = bio.message;
+	var formattedBiomessage = HTMLwelcomeMsg.replace("%data%", message);
+	$("#header").append(formattedBiomessage);
 }
 
 displayBio();
@@ -77,21 +80,21 @@ var work = {
 		"title": "Technical Support Representative II",
 		"dates": "September 2008 - present",
 		"location": "Milwaukee, WI",
-		"description": "Helping customers with U-verse related technical issues - TV, VoIP, and internet"
+		"description": "Help customers with U-verse related technical issues for TV, VoIP, and internet services. Created a website that filled in some gaps of information that the company had, and this site is now used by around 600 people daily across U-verse care, both in the US and overseas. Field technicians even found the site and use it from time to time."
 	},
 	{
 		"employer": "Merge Healthcare",
 		"title": "Technical Support Representative I",
 		"dates": "January 2008 - September 2008",
 		"location": "West Allis, WI",
-		"description": "Provided software support to clinics and hospitals on their imaging archive systems"
+		"description": "Provided software support to clinics and hospitals on their imaging archive systems."
 	},
 	{
 		"employer": "Spancrete",
 		"title": "Project Drafter",
 		"dates": "September 2006 - January 2008",
 		"location": "Waukesha, WI",
-		"description": "Created construction plans, details, and elevations for precast components of parking structures, condos, and sports stadiums"
+		"description": "Created construction plans, details, and elevations for precast components of parking structures, condos, and sports stadiums."
 	}
 	]
 };

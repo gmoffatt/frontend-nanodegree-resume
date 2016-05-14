@@ -9,9 +9,13 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
+  padding:0px;
   margin:0;
   font-family: 'Quattrocento Sans', sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
 }
 
 .clear-fix {
@@ -127,9 +131,9 @@ a {
 }
 
 /* TODO: Replace with image later */
-#header {
+/*#header {
   background-color: #CECECE;
-}
+}*/
 
 .flex-box {
   display: -webkit-flex;
@@ -151,7 +155,7 @@ ul {
 .biopic {
   float: left;
   padding: 10px;
-  width: 200px;
+  width: 600px;
   display: none;
 }
 
@@ -169,17 +173,22 @@ span {
   text-align: center;
 }
 
+span.white-text a {
+  color: #115A5A;
+  text-decoration: none;
+}
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
   #lets-connect {
-    margin-top: 5%;
+    margin-top: 5px;
   }
 }
 
-@media only screen and (max-width:900px) {
+@media only screen and (max-width:990px) {
   .biopic {
-    width: 175px;
+    width: 300px;
   }
 }
 
@@ -197,13 +206,13 @@ span {
 
 #map {
   display: block;
-  height: 100%;
+  height: 80%;
   width: 85%;
   margin: 0 auto;
 }
 
 #mapDiv {
-  height: 400px;
+  height: 600px;
   width: 100%;
   padding-bottom: 5%;
 }
@@ -213,4 +222,31 @@ span {
   .biopic {
     display: block;
   }
+}
+
+
+.divBorder {
+  border:1px lightgray solid;
+  box-shadow: 1px 1px 6px #6f6f6f;
+  margin-bottom:13px;
+  padding-bottom:10px;
+  padding-top:10px;
+  margin-left:0px;
+  margin-right:0px;
+  background-color:white
+}
+ 
+.divBorder:hover {
+  border:1px lightgray solid;
+  box-shadow: 3px 3px 6px #6f6f6f;
+  margin-bottom:13px;
+  padding-bottom:10px;
+  padding-top:10px;
+  margin-left:0px;
+  margin-right:0px;
+  background-color:white;
+}
+
+.container {
+  margin-top:50px;
 }

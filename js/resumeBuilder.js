@@ -25,7 +25,7 @@ var bio = {
 		"location": "Germantown, WI"
 	},
 	"message": "Thank you for viewing my resume",
-	"bioPic": "images/fry.jpg",
+	"bioPic": "images/f12.jpg",
 	"skills": ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "PHP", "GitHub"]
 };
 
@@ -70,7 +70,6 @@ function displayBio() {
 	var formattedBiomessage = HTMLwelcomeMsg.replace("%data%", message);
 	$("#header").append(formattedBiomessage);
 }
-
 displayBio();
 
 var work = {
@@ -186,7 +185,6 @@ for (jobs in work.jobs) {
 
 }
 }
-
 displayWork();
 
 
@@ -208,7 +206,6 @@ for (project in projects.project) {
 
 }
 }
-
 displayProjects();
 
 
@@ -234,7 +231,6 @@ for (schools in education.schools) {
 
 }
 }
-
 displaySchool();
 
 function displayOnline() {
@@ -257,9 +253,25 @@ for (onlineClasses in education.onlineClasses) {
 
 }
 }
-
 displayOnline();
 
+function addClasses() {
+	var newMainClass = document.getElementById("main");
+	newMainClass.className += "container";
+	var newHeaderClass = document.getElementById("header");
+	newHeaderClass.className += " col-md-12 divBorder";
+	var newWorkClass = document.getElementById("workExperience");
+	newWorkClass.className += " col-md-12 divBorder";
+	var newProjectsClass = document.getElementById("projects");
+	newProjectsClass.className += " col-md-12 divBorder";
+	var newEducationClass = document.getElementById("education");
+	newEducationClass.className += " col-md-12 divBorder";
+	var newEducationClass = document.getElementById("mapDiv");
+	newEducationClass.className += " col-md-12 divBorder";
+	var newConnectClass = document.getElementById("lets-connect");
+	newConnectClass.className += " col-md-12 divBorder";
+}
+addClasses();
 
 function inName(name) {
     var name = name.split(" ");

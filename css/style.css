@@ -25,7 +25,7 @@ body {
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
+  padding: 0 50px;
 }
 
 h1 {
@@ -47,6 +47,7 @@ h3 {
   font-size: 24px;
   color: #000;
   line-height: 22px;
+  font-weight: bold;
 }
 
 h4 {
@@ -60,7 +61,7 @@ h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
+  padding:0px 50px;
 
 }
 
@@ -91,7 +92,6 @@ p {
 a {
   color: #115A5A;
   text-decoration: none;
-  margin-top: 10px;
   display: block;
 }
 
@@ -100,6 +100,7 @@ a {
   font-weight: bold;
   color: #115A5A;
   line-height: 28px;
+  padding-top:20px;
 }
 
 #skills-h3 {
@@ -176,6 +177,7 @@ span {
 span.white-text a {
   color: #115A5A;
   text-decoration: none;
+  font-size:16px;
 }
 
 /* Media queries to handle various device widths */
@@ -229,7 +231,7 @@ span.white-text a {
   border:1px lightgray solid;
   box-shadow: 1px 1px 6px #6f6f6f;
   margin-bottom:13px;
-  padding-bottom:10px;
+  padding-bottom:20px;
   padding-top:10px;
   margin-left:0px;
   margin-right:0px;
@@ -240,7 +242,7 @@ span.white-text a {
   border:1px lightgray solid;
   box-shadow: 3px 3px 6px #6f6f6f;
   margin-bottom:13px;
-  padding-bottom:10px;
+  padding-bottom:20px;
   padding-top:10px;
   margin-left:0px;
   margin-right:0px;

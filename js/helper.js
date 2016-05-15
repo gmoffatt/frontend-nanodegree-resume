@@ -12,7 +12,7 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
+var HTMLheaderName = '<h1 id="name">%data%</h1><br>';
 var HTMLheaderRole = '<span>%data%</span><hr>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
@@ -38,7 +38,7 @@ var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
+var HTMLprojectDates = '<div class="date-text">%data%</div><br>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
@@ -55,7 +55,7 @@ var HTMLonlineSchool = ' -- %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
-var internationalizeButton = '<button>Internationalize</button>';
+var internationalizeButton = '<button id="intBtn">Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 
@@ -63,7 +63,7 @@ var googleMap = '<div id="map"></div>';
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
 $(document).ready(function() {
-  $('button').click(function() {
+  $('#intBtn').click(function() {
     var iName = inName($("#name").text()) || function(){};
     $('#name').html(iName);  
   });
@@ -84,12 +84,12 @@ function logClicks(x,y) {
   console.log('x location: ' + x + '; y location: ' + y);
 }
 
-//$(document).click(function(loc) {
-//  var x = loc.pageX;
-//  var y = loc.pageY;
+$(document).click(function(loc) {
+  var x = loc.pageX;
+  var y = loc.pageY;
 
-//  logClicks(x,y);
-//});
+  logClicks(x,y);
+});
 
 
 

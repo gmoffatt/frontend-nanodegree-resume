@@ -43,7 +43,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   the DOM. jQuery is fast and easy to use, but it doesn't do anything
   you can't accomplish with vanilla (regular) JavaScript.
   -->
-  <script src="js/jQuery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
@@ -57,7 +57,32 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <meta name="viewport" content="width=device-width">
 </head>
-<body>
+<body data-spy="scroll" data-target="#resumeNavbar" data-offset="70">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#resumeNavbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="resumeNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#header">Top</a></li>
+        <li><a href="#workExperience">Work</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#mapDiv">Locations</a></li>
+        <li><a href="#lets-connect">Tweets</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
   <div id="main">
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -69,19 +94,19 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <ul id="topContacts" class="flex-box"></ul>
     </div>
     <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
+    <div id="workExperience">
       <h2>Work Experience</h2>
     </div>
     <div id="projects">
       <h2>Projects</h2>
     </div>
-    <div id="education" class="gray">
+    <div id="education">
       <h2>Education</h2>
     </div>
     <div id="mapDiv">
       <h2>Home, work, and school locations</h2>
     </div>
-    <div id="lets-connect" class="dark-gray">
+    <div id="lets-connect">
       <h2 class="orange center-text">JavaScript Tweets</h2>
         <ul id="footerContacts" class="flex-box">
 

@@ -16,6 +16,7 @@ h6 {
 
 body {
   background-color: #f3f3f3;
+  position: relative;
 }
 
 .clear-fix {
@@ -25,7 +26,7 @@ body {
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0 50px;
+  padding: 0 20px;
 }
 
 h1 {
@@ -61,7 +62,7 @@ h2,
 h3,
 h4,
 h5 {
-  padding:0px 50px;
+  padding:0px 20px;
 
 }
 
@@ -82,13 +83,6 @@ h5 {
   float: right;
 
 }
-
-p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
-}
-
 a {
   color: #115A5A;
   text-decoration: none;
@@ -132,9 +126,9 @@ a {
 }
 
 /* TODO: Replace with image later */
-/*#header {
-  background-color: #CECECE;
-}*/
+#header {
+  padding:10px 20px 20px 20px;
+}
 
 .flex-box {
   display: -webkit-flex;
@@ -142,7 +136,7 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
+  padding: 0px 10px;
 }
 
 .center-content {
@@ -216,7 +210,7 @@ span.white-text a {
 #mapDiv {
   height: 600px;
   width: 100%;
-  padding-bottom: 5%;
+  padding-bottom: 20px;
 }
 
 @media only screen and (min-width: 750px) {
@@ -250,5 +244,13 @@ span.white-text a {
 }
 
 .container {
-  margin-top:50px;
+  margin-top:60px;
+}
+
+div.project-entry p {
+  line-height: 1;
+}
+
+span.icon-bar {
+  padding:0px;
 }

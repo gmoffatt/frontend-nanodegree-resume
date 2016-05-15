@@ -160,7 +160,6 @@ formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
 $("#skills").append(formattedSkill);
 formattedSkill = HTMLskills.replace("%data%", bio.skills[6]);
 $("#skills").append(formattedSkill);
-
 }
 
 function displayWork() {
@@ -182,7 +181,6 @@ for (jobs in work.jobs) {
 
 	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[jobs].description);
 	$(".work-entry:last").append(formattedDescription);
-
 }
 }
 displayWork();
@@ -203,7 +201,6 @@ for (project in projects.project) {
 
 	var formattedprojectImage = HTMLprojectImage.replace("%data%", projects.project[project].image);
 	$(".project-entry:last").append(formattedprojectImage);
-
 }
 }
 displayProjects();
@@ -228,7 +225,6 @@ for (schools in education.schools) {
 
 	var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[schools].major);
 	$(".education-entry:last").append(formattedschoolMajor);
-
 }
 }
 displaySchool();
@@ -250,7 +246,6 @@ for (onlineClasses in education.onlineClasses) {
 
 	var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineClasses[onlineClasses].url);
 	$(".education-entry:last").append(formattedonlineURL);
-
 }
 }
 displayOnline();
@@ -272,6 +267,7 @@ function addClasses() {
 	newConnectClass.className += " col-md-12 divBorder";
 }
 addClasses();
+//found this code on stack overflow, adding classes using JS
 
 function inName(name) {
     var name = name.split(" ");
@@ -289,3 +285,5 @@ $("#mapDiv").append(googleMap);
 var shiftWindow = function() { scrollBy(0, -60) };
 if (location.hash) shiftWindow();
 window.addEventListener("hashchange", shiftWindow);
+//code taken from stack overflow, adding padding when clicking 
+//on navbar links so anchor is not covered by navbar

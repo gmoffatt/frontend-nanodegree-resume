@@ -1,0 +1,36 @@
+body {
+	font-family: 'Titillium Web', sans-serif;
+	color: #036;
+	font-weight: 300;
+	margin: 0 auto;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.text-muted {
+	color: #bcbbbb;
+}
+
+.text-thin {
+	font-weight: 100;
+}
+
+.title-super {
+	font-size: 50px;
+}
+
+.title-logo {
+	margin-top: 20px;
+}
+
+hr {
+	height: 5px;
+	background-color: #3A3838;
+}
+
+.modal-body {
+	font-family: arial, sans-serif;
+	color: black;
+}

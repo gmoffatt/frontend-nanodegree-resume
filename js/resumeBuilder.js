@@ -146,7 +146,7 @@ if (bio.skills.length > 0) {
 }
 
 function displayWork() {
-    if (work.jobs.length > 0) {  //used a version of the code at bottom of index.html to get this
+    if (work.jobs.length > 0) {
         $("#workExperience").append(HTMLworkStart);
 
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[jobs].employer);

@@ -14,23 +14,24 @@ The <head> of a website generally links to important resources the page will
 need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
 -->
+
 <head>
-  <!-- This tells the browser how to read the document. -->
-  
+    <!-- This tells the browser how to read the document. -->
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Tells the browser what the title of this page should be. -->
-  <title>Resume</title>
+    <!-- Tells the browser what the title of this page should be. -->
+    <title>Resume</title>
 
-  <!-- Load the page styles. -->
-  <link href="css/style.css" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet'>
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Load the page styles. -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
 
-  <!--
+    <!--
   jQuery is a common JavaScript library for reading and making changes to the
   Document Object Model (DOM). The DOM is a tree that contains information
   about what is actually visible on a website.
@@ -43,77 +44,80 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   the DOM. jQuery is fast and easy to use, but it doesn't do anything
   you can't accomplish with vanilla (regular) JavaScript.
   -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
-  <!-- More on helper.js in the class -->
-  <script src="js/helper.js"></script>
-  <script src="js/bootstrap.js"></script>
+    <!-- More on helper.js in the class -->
+    <script src="js/helper.js"></script>
+    <script src="js/bootstrap.js"></script>
 
-  <!--
+    <!--
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
-  <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width">
 </head>
+
 <body data-spy="scroll" data-target="#resumeNavbar" data-offset="70">
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-  <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#resumeNavbar" aria-expanded="false">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#resumeNavbar" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-    </div>
+            </div>
 
-<!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="resumeNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#header">Top</a></li>
-        <li><a href="#workExperience">Work</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#mapDiv">Locations</a></li>
-        <li><a href="#lets-connect">Tweets</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-  <div id="main">
-    <!--
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="resumeNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#header">Top</a></li>
+                    <li><a href="#workExperience">Work</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#mapDiv">Locations</a></li>
+                    <li><a href="#lets-connect">Tweets</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div id="main">
+        <!--
     Everything from here to the <script> tag below is the skeleton of your
     website. Your code will add information to each of the sections of the
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
-    </div>
-    <div style="clear: both;"></div>
-    <div id="workExperience">
-      <h2>Work Experience</h2>
-    </div>
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
-    <div id="education">
-      <h2>Education</h2>
-    </div>
-    <div id="mapDiv">
-      <h2>Home, work, and school locations</h2>
-    </div>
-    <div id="lets-connect">
-      <h2 class="orange center-text">JavaScript Tweets</h2>
-        <ul id="footerContacts" class="flex-box">
+        <div id="header" class="center-content clear-fix">
+            <ul id="topContacts" class="flex-box"></ul>
+        </div>
+        <div style="clear: both;"></div>
+        <div id="workExperience">
+            <h2>Work Experience</h2>
+        </div>
+        <div id="projects">
+            <h2>Projects</h2>
+        </div>
+        <div id="education">
+            <h2>Education</h2>
+        </div>
+        <div id="mapDiv">
+            <h2>Home, work, and school locations</h2>
+        </div>
+        <div id="lets-connect">
+            <h2 class="orange center-text">JavaScript Tweets</h2>
+            <ul id="footerContacts" class="flex-box">
 
-    <a class="twitter-timeline
-     href="https://twitter.com/hashtag/javascript"
-     data-widget-id="730973347446558728">#javascript Tweets</a>
-     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <a class="twitter-timeline
+     href=" https://twitter.com/hashtag/javascript "
+     data-widget-id="730973347446558728 ">#javascript Tweets</a>
+     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js ";fjs.parentNode.insertBefore(js,fjs);}}(document,"script ","twitter-wjs ");</script>
       <!--twitter widget created from my account, showing #javascript tweets-->
       </ul>
     </div>
@@ -124,7 +128,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
   dynamically when this website, index.html, is opened.
   -->
-  <script src="js/resumeBuilder.js"></script>
+  <script src="js/resumeBuilder.js "></script>
 
 
   <!--
@@ -135,7 +139,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   course.
   -->
 
-  <script type="text/javascript">
+  <script type="text/javascript ">
     // Notice how all of a sudden there's JavaScript inside this HTML
     // document? You can write JavaScript between <script> tags. At the end of your
     // JavaScript, don't forget the closing script tag with the slash (/).
